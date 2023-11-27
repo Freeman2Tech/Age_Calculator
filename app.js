@@ -4,21 +4,22 @@ const date = new Date();
 
 const update = () => {
   const date = new Date();
-  let hours = date.getHours();
+  let hours = date.getHours() > 12 ? date.getHours() - 12 : date.getHours();
   let minutes = date.getMinutes();
   let sec = date.getSeconds();
+
   if (hours.toString().length === 1) {
-    hours = `0${date.getHours()}`;
+    hours = `0${hours}`;
   } else {
     hours;
   }
   if (minutes.toString().length === 1) {
-    minutes = `0${date.getHours()}`;
+    minutes = `0${minutes}`;
   } else {
     minutes;
   }
   if (sec.toString().length === 1) {
-    sec = `0${date.getSeconds()}`;
+    sec = `0${sec}`;
   } else {
     sec = `${sec}`;
   }
