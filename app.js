@@ -45,7 +45,8 @@ document.querySelector("button").addEventListener("click", () => {
       dob.value.slice(0, 4).length > 4 ||
       (parseInt(dob.value.slice(0, 4)) == date.getFullYear() &&
         parseInt(dob.value.slice(8, 10)) > date.getDate() &&
-        parseInt(dob.value.slice(5, 7)) == currMonth)
+        parseInt(dob.value.slice(5, 7)) == currMonth) ||
+      parseInt(dob.value.slice(0, 4)) > date.getFullYear()
     ) {
       document.querySelector("#age").textContent = "Invalid Date Of Birth";
       ageCon.classList.remove("hidden");
