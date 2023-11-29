@@ -66,9 +66,10 @@ document.querySelector("button").addEventListener("click", () => {
 
       if (parseInt(dob.value.slice(5, 7)) > currMonth) {
         dobMonth = parseInt(dob.value.slice(5, 7)) - currMonth;
+        age = age - 1;
         bdMsg.textContent = `Your Birthday is ${dobMonth} ${
           dobMonth > 1 ? "Months" : "Month"
-        } Away. Happy Birthday in Advance!!!`;
+        } Away. Happy ${age + 1} Birthday in Advance!!!`;
       } else if (parseInt(dob.value.slice(5, 7)) == currMonth) {
         bdMsg.textContent = `It's Your Month, Happy ${age} Birthday To You!!!`;
       } else {
