@@ -58,6 +58,7 @@ document.querySelector("button").addEventListener("click", () => {
     ) {
       let day = date.getDate() - parseInt(dob.value.slice(8, 10));
       bdMsg.textContent = `Happy ${day} ${day > 1 ? "days" : "day"} old`;
+      ageCon.classList.add("hidden");
     } else {
       let age = date.getFullYear() - parseInt(dob.value.slice(0, 4));
       let dobMonth;
