@@ -75,7 +75,7 @@ document.querySelector("button").addEventListener("click", () => {
         bdMsg.textContent = `It's Your Month, Happy ${age} Birthday To You!!!`;
       } else {
         dobMonth = currMonth - parseInt(dob.value.slice(5, 7));
-        bdMsg.textContent = `Congratulations at Your ${age} Birthday. You Already Celeberated Your Birthday ${dobMonth} ${
+        bdMsg.textContent = `Congratulations on Your ${age} Birthday. You Already Celeberated Your Birthday ${dobMonth} ${
           dobMonth > 1 ? "Months" : "Month"
         } Back. Happy Belated Birthday!!!`;
       }
